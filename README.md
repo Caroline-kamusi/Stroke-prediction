@@ -38,7 +38,17 @@ Tailored health screenings and interventions are recommended for individuals wit
 Graphs:
 
 Preventive Measures Impact - A hypothetical visualization of the impact of various preventive measures based on the findings.
-## Results
+## Key Remarks
+1.Model Performance:
+
+Decision Tree and Random Forest show high training accuracy but tend to overfit, evidenced by significantly lower validation metrics.
+XGBoost and Voting Classifier demonstrate high cross-validation scores, suggesting better generalization despite lower validation performance.
+2.Precision vs. Recall Trade-off:
+
+All models struggle with precision for the positive class (stroke), indicating that while some models can identify many positive cases, they also produce a high number of false positives.
+3.Cross-Validation Insights:
+
+XGBoost achieves the highest cross-validation score, indicating robust performance across different subsets of the data.
 
 ## Conclusion 
 The analysis successfully identified key factors contributing to stroke risk and demonstrated the utility of various features in predicting stroke occurrences. The data-driven insights offer a foundation for targeting high-risk individuals and implementing effective preventive measures.
@@ -46,4 +56,5 @@ The analysis successfully identified key factors contributing to stroke risk and
 1.Health Monitoring: Regular monitoring and intervention for individuals with high BMI and glucose levels.
 2.Personalized Prevention: Develop personalized prevention plans for individuals with hypertension or heart disease.
 3.Public Health Initiatives: Implement public health initiatives to raise awareness about stroke risk factors, particularly targeting high-risk populations.
-4.Model Development: Further refine predictive models using additional features and advanced techniques for more accurate stroke risk predictions.
+4.Consider using XGBoost or Voting Classifier for final model selection due to their higher cross-validation scores.
+Evaluate and possibly adjust model thresholds to balance precision and recall better for the positive class.
